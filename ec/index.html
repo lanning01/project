@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./src/style/index.css"/>
+    <!--<link rel="stylesheet" href="./bootstrap/library/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="./bootstrap/library/css/bootstrap-theme.css">-->
+</head>
+<body>
+<header>
+    <div class="user-info w">
+        <div class="login-info l">
+            <span><a href="JavaScript:;">商城首页</a></span>
+            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="JavaScript:;">登录</a></span></div>
+            <span class="exit"><a href="JavaScript:;">免费注册</a></span>
+        </div>
+        <ul class="quick-menu r">
+            <li><a href="JavaScript:;">我的订单</a></li>
+            <li><a href="JavaScript:;">购物车0件</a></li>
+            <li><a href="JavaScript:;">帮助中心</a></li>
+            <li><a href="JavaScript:;">手机商城<i class="ico1"></i></a></li>
+            <li><a href="JavaScript:;">中关村在线</a></li>
+            <li><a href="JavaScript:;">招商合作</a></li>
+            <li><a href="JavaScript:;">联系客服<i class="ico2"></i></a></li>
+        </ul>
+    </div>
+</header>
+<section id='logo-search'>
+    <div class="logo-search w">
+        <a href="JavaScript:;"><img class="l" src="/project/ec/assets/imgs/indeximg/logo.png" alt=""></a>
+        <div class="search l">
+            <form>
+                <input type="text" placeholder="找找你想搜索的商品~" class="text"/>
+                <input type="submit" value="搜索" class="sub"/>
+            </form>
+        </div>
+        <div class="quick-entry r">
+            <a href="JavaScript:;"><i class="icon1"></i>我的订单</a>
+            <a href="JavaScript:;"><i class="icon2"></i>购物车<i class="icon3">0</i></a>
+        </div>
+    </div>
+</section>
+<section id='logo-search-bar'>
+    <div class="logo-search w">
+        <a href="JavaScript:;"><img class="l" src="/project/ec/assets/imgs/indeximg/logo.png" alt=""></a>
+        <div class="search l">
+            <form>
+                <input type="text" placeholder="找找你想搜索的商品~" class="text"/>
+                <input type="submit" value="搜索" class="sub"/>
+            </form>
+        </div>
+        <div class="quick-entry r">
+            <a href="JavaScript:;"><i class="icon1"></i>我的订单</a>
+            <a href="JavaScript:;"><i class="icon2"></i>购物车<i class="icon3">0</i></a>
+        </div>
+    </div>
+</section>
+<nav>
+    <div class="w">
+        <ul class="first l">
+            <li class="first_li"><a href="JavaScript:;"><span></span>手机分类</a>
+                <div id="navSkip">{{value.name}}</div>
+                <ul class="second">
+                    <li class="second_li"><a href="JavaScript:;"><span></span>苹果手机</a>
+                        <ul class="third t1">
+                            <li class="third_li"><a href="http://localhost/project/ec/src/html/details.html?productId=5"><span></span>IphoneX</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone8 PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone8</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone7 PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone7</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone6 PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>Iphone6</a>
+                        </ul>
+                    </li>
+                    <li class="second_li"><a href="JavaScript:;"><span></span>三星手机</a>
+                        <ul class="third t2">
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三星 note8</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三星 S8 edge</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三级 S8</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三星 S7</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三星C5 PRO</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>三星C9 PRO</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>GALAXY J3300</a>
+                        </ul>
+                    </li>
+                    <li class="second_li"><a href="JavaScript:;"><span></span>VIVO手机</a>
+                        <ul class="third t3">
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO X21</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO X20 PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO X20</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO X9S</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO Y67</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO Y79</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>VIVO Y66</a>
+                        </ul>
+                    </li>
+                    <li class="second_li"><a href="JavaScript:;"><span></span>OPPO手机</a>
+                        <ul class="third t4">
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO R15</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO R11S PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO R11S</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO R11 PLUS</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO A77</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO A59S</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>OPPO A57</a>
+                        </ul>
+                    </li>
+                    <li class="second_li"><a href="JavaScript:;"><span></span>华为手机</a>
+                        <ul class="third t5">
+                            <li class="third_li"><a href="JavaScript:;"><span></span>华为P10 plus</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>华为P10</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>畅享7 plus</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>麦芒6</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>mate10</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>mate9</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>nova2</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>nova2s</a>
+                        </ul>
+                    </li>
+                    <li class="second_li"><a href="JavaScript:;"><span></span>小米手机</a>
+                        <ul class="third t6">
+                            <li class="third_li"><a href="JavaScript:;"><span></span>红米note4x</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>小米5X</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>小米6</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>小米MAX2</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>红米note5</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>小米note3</a>
+                            <li class="third_li"><a href="JavaScript:;"><span></span>小米MIX2</a>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav-nav">
+            <li><a href="JavaScript:;">首页</a></li>
+            <li><a href="JavaScript:;">团购</a></li>
+            <li><a href="JavaScript:;">?????</a></li>
+        </ul>
+    </div>
+    <img src="/project/ec/assets/imgs/indeximg/banner1.jpg" alt="">
+</nav>
+<div class="J-global-toolbar">
+    <div class="toolbar-wrap J-wrap">
+        <div class="toolbar">
+            <div class="toolbar-panels J-panel">
+                <div style="visibility: hidden; z-index: -1;" class="J-content toolbar-panel tbar-panel-cart toolbar-animate-out">
+                    <h3 class="tbar-panel-header J-panel-header">
+                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html" class="title"><i></i><em class="title">购物车</em></a>
+                        <span class="close-panel J-close"></span>
+                    </h3>
+                    <div class="tbar-panel-main">
+                        <div class="tbar-panel-content J-panel-content">
+                            <div id="J-cart-tips" class="tbar-tipbox hide">
+                                <div class="tip-inner">
+                                    <span class="tip-text">还没有登录，登录后商品将被保存</span>
+                                    <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" class="tip-btn J-login">登录</a>
+                                </div>
+                            </div>
+                            <div id="J-cart-render">
+                                <div class="tbar-cart-list">
+                                    <div class="tbar-cart-item">
+                                        <div class="jtc-item-promo">
+                                            <em class="promo-tag promo-mz">满赠<i class="arrow"></i></em>
+                                            <div class="promo-text">已购满600元，您可领赠品</div>
+                                        </div>
+                                        <div class="jtc-item-goods">
+                                            <span class="p-img"><a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank"><img src="./index_files/rBEQWFEAilIIAAAAAACGm9ueTbUAAAH7gB8kskAAIaz106.jpg" alt="美的（Midea） BCD-206TM(E) 206升静音/省电/三门冰箱（闪白银）" height="50" width="50"></a></span>
+                                            <div class="p-name">
+                                                <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#">美的（Midea） BCD-206TM(E)206升静音/省电/三门冰箱（闪白银）</a>
+                                            </div>
+                                            <div class="p-price"><strong>¥1398.00</strong>×1 </div>
+                                            <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" class="p-del J-del" style="display: none;">删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="tbar-cart-item">
+                                        <div class="jtc-item-promo">
+                                            <em class="promo-tag promo-mz">满赠<i class="arrow"></i></em>
+                                            <div class="promo-text">已购满600元，您可领赠品</div>
+                                        </div>
+                                        <div class="jtc-item-goods">
+											<span class="p-img">
+												<a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank"><img src="./index_files/rBEQWFEAilIIAAAAAACGm9ueTbUAAAH7gB8kskAAIaz106.jpg" alt="美的（Midea） BCD-206TM(E) 206升静音/省电/三门冰箱（闪白银）" height="50" width="50"></a>
+											</span>
+                                            <div class="p-name">
+                                                <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#">美的（Midea） BCD-206TM(E)206升静音/省电/三门冰箱（闪白银）</a>
+                                            </div>
+                                            <div class="p-price"><strong>¥1398.00</strong>×1 </div>
+                                            <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" class="p-del J-del" style="display: none;">删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="tbar-cart-item">
+                                        <div class="jtc-item-promo">
+                                            <em class="promo-tag promo-mz">满赠<i class="arrow"></i></em>
+                                            <div class="promo-text">已购满600元，您可领赠品</div>
+                                        </div>
+                                        <div class="jtc-item-goods">
+                                            <span class="p-img"><a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank"><img src="./index_files/rBEQWFEAilIIAAAAAACGm9ueTbUAAAH7gB8kskAAIaz106.jpg" alt="美的（Midea） BCD-206TM(E) 206升静音/省电/三门冰箱（闪白银）" height="50" width="50"></a></span>
+                                            <div class="p-name"><a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#">美的（Midea） BCD-206TM(E)206升静音/省电/三门冰箱（闪白银）</a> </div>
+                                            <div class="p-price"> <strong>¥1398.00</strong>×1 </div>
+                                            <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" class="p-del J-del" style="display: none;">删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="tbar-cart-item">
+                                        <div class="jtc-item-promo">
+                                            <em class="promo-tag promo-mz">满赠<i class="arrow"></i></em>
+                                            <div class="promo-text">已购满600元，您可领赠品</div>
+                                        </div>
+                                        <div class="jtc-item-goods">
+                                            <span class="p-img"><a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank"><img src="./index_files/rBEQWFEAilIIAAAAAACGm9ueTbUAAAH7gB8kskAAIaz106.jpg" alt="美的（Midea） BCD-206TM(E) 206升静音/省电/三门冰箱（闪白银）" height="50" width="50"> </a> </span>
+                                            <div class="p-name"><a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#">美的（Midea） BCD-206TM(E)206升静音/省电/三门冰箱（闪白银）</a> </div>
+                                            <div class="p-price"> <strong>¥1398.00</strong>×1 </div>
+                                            <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" class="p-del J-del">删除</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbar-panel-footer J-panel-footer">
+                        <div class="tbar-checkout">
+                            <div class="jtc-number"> <strong class="J-count">0</strong>件商品 </div>
+                            <div class="jtc-sum"> 共计：<strong class="J-total">¥113</strong> </div>
+                            <a class="jtc-btn J-btn" href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#none" target="_blank">去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="visibility: hidden;" data-name="follow" class="J-content toolbar-panel tbar-panel-follow">
+                    <h3 class="tbar-panel-header J-panel-header">
+                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank" class="title"> <i></i> <em class="title">我的关注</em> </a>
+                        <span class="close-panel J-close"></span>
+                    </h3>
+                    <div class="tbar-panel-main">
+                        <div class="tbar-panel-content J-panel-content">
+                            <div class="tbar-tipbox2">
+                                <div class="tip-inner"> <i class="i-loading"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbar-panel-footer J-panel-footer"></div>
+                </div>
+
+                <div style="visibility: hidden;" class="J-content toolbar-panel tbar-panel-history toolbar-animate-in">
+                    <h3 class="tbar-panel-header J-panel-header">
+                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank" class="title"> <i></i> <em class="title">我的足迹</em> </a>
+                        <span class="close-panel J-close"></span>
+                    </h3>
+                    <div class="tbar-panel-main">
+                        <div class="tbar-panel-content J-panel-content">
+                            <div class="jt-history-wrap">
+                                <ul>
+                                    <li class="jth-item">
+                                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" class="img-wrap"> <img src="./index_files/rBEHalCKCk8IAAAAAAD5nbR5xOAAACfgQENi_wAAPm1269.jpg" height="100" width="100"> </a>
+                                        <a class="add-cart-button" href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank">加入购物车</a>
+                                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank" class="price">￥498.00</a>
+                                    </li>
+                                    <li class="jth-item">
+                                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" class="img-wrap"> <img src="./index_files/rBEHalCKCk8IAAAAAAD5nbR5xOAAACfgQENi_wAAPm1269.jpg" height="100" width="100"></a>
+                                        <a class="add-cart-button" href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank">加入购物车</a>
+                                        <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank" class="price">￥498.00</a>
+                                    </li>
+                                </ul>
+                                <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" class="history-bottom-more" target="_blank">查看更多足迹商品 &gt;&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbar-panel-footer J-panel-footer"></div>
+                </div>
+            </div>
+
+            <div class="toolbar-header"></div>
+
+            <div class="toolbar-tabs J-tab">
+                <div class="toolbar-tab tbar-tab-cart">
+                    <i class="tab-ico"></i>
+
+                    <span class="tab-sub J-count ">1</span>
+                    <em class="tab-text">我的关注</em></div>
+                <div class="toolbar-tab tbar-tab-follow">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">我的关注</em>
+                    <span class="tab-sub J-count hide">0</span>
+                </div>
+                <div class="toolbar-tab tbar-tab-history">
+                    <i class="tab-ico"></i>
+                    <em class="tab-text">我的足迹</em>
+                    <span class="tab-sub J-count hide">0</span>
+                </div>
+            </div>
+
+            <div class="toolbar-footer">
+                <div class="toolbar-tab tbar-tab-top"> <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#"> <i class="tab-ico  "></i> <em class="footer-tab-text">顶部</em> </a> </div>
+                <div class=" toolbar-tab tbar-tab-feedback"> <a href="http://www.17sucai.com/preview/1/2015-12-21/jdnav/index.html#" target="_blank"> <i class="tab-ico"></i> <em class="footer-tab-text ">反馈</em> </a> </div>
+            </div>
+
+            <div class="toolbar-mini"></div>
+
+        </div>
+
+        <div id="J-toolbar-load-hook"></div>
+
+    </div>
+</div>
+
+<section id="team-buying">
+    <div class="w team-buying">
+        <div class="team-buying-top">
+            <span></span>
+            <h2>团购</h2>
+            <p>热门、低价、买实惠</p>
+        </div>
+        <div class="team-buying-bottom">
+            <div class="team-buying-three">
+                <div class="team-one"></div>
+                <div class="team-two"></div>
+                <div class="team-three"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="phone_brand" class="w">
+    <div class="brand">
+        <div class="w brand_text l">品牌:</div>
+        <ul class="brand_phone l">
+
+        </ul>
+    </div>
+    <div class="price l">
+        <div class="w price_text l">价格:</div>
+        <ul class="price_phone l">
+
+        </ul>
+    </div>
+    <div class="character l">
+        <div class="w character_text l">颜色:</div>
+        <ul class="character_phone l">
+
+        </ul>
+    </div>
+    <div class="internet l">
+        <div class="w internet_text l">内存:</div>
+        <ul class="internet_phone l">
+
+        </ul>
+    </div>
+</section>
+<section id="promise" class="w">
+    <img src="/project/ec/assets/imgs/indeximg/promise.jpg" alt="">
+    <p>商城服务保障</p>
+    <img src="/project/ec/assets/imgs/indeximg/four.jpg" alt="">
+</section>
+<section id="phone_list" class="w">
+    <ul class="phone_list_ul l">
+        <li><a href="JavaScript:;">默认</a></li>
+        <li><a href="JavaScript:;">高人气</a></li>
+        <li><a href="JavaScript:;">高销量</a></li>
+        <li><a href="JavaScript:;">价格由低到高</a></li>
+        <li><a href="JavaScript:;">价格由高到低</a></li>
+        <li><a href="JavaScript:;">发货地</a><span></span></li>
+        <li class="price_search">
+            <div class="visible">
+            <input type="text" value="" placeholder="￥" class="low input ">
+            <p class="xian">-</p>
+            <input type="text" value="" placeholder="￥" class="input high"><br>
+
+                <p class="enter">确定</p>
+                <p class="clear">清除</p>
+            </div>
+        </li>
+        <!--<li class="line">-</li>-->
+        <!--<li class="line1 price_search"></li>-->
+        <!--<li>-->
+
+        <li>
+            <input type="checkbox" name="is_tuan" value="1" class="check">团购
+        </li>
+        <li class="page">1/60</li>
+        <li>
+            <button>&lt;</button>
+        </li>
+        <li>
+            <button>&gt;</button>
+        </li>
+    </ul>
+    <div class="phone_right r">
+        <p class="local l">本地优选</p>
+        <p class="advent r">广告</p>
+    </div>
+</section>
+<section id="list_all" class="w">
+    <ul class="list_all_left l">
+
+    </ul>
+    <ul class="list_all_right r">
+
+    </ul>
+</section>
+<!--分页操作-->
+<section id="pageChange" style="width:800px;margin:0 auto;" class="w">
+
+    <div id="kkpager"></div>
+
+</section>
+<div class="searchBottom w">
+    <form>
+        <input type="text" placeholder="搜索一下" class="text"/>
+        <input type="submit" value="搜索" class="sub"/>
+    </form>
+</div>
+<section id="footer">
+    <ul class="four">
+        <li>购物指南</li>
+        <li><a href="JavaScript:;">帐号注册</a></li>
+        <li><a href="JavaScript:;">购物流程</a></li>
+        <li><a href="JavaScript:;">付款方式</a></li>
+    </ul>
+    <ul class="four">
+        <li>售后服务</li>
+        <li><a href="JavaScript:;">先行赔付</a></li>
+        <li><a href="JavaScript:;">退款退货流程</a></li>
+        <li><a href="JavaScript:;">投诉举报</a></li>
+    </ul>
+    <ul class="four">
+        <li>商城保障</li>
+        <li><a href="JavaScript:;">正品保障</a></li>
+        <li><a href="JavaScript:;">物流配送</a></li>
+        <li><a href="JavaScript:;">24小时发货</a></li>
+        <li><a href="JavaScript:;">发票保障</a></li>
+    </ul>
+    <ul class="four">
+        <li>商家服务</li>
+        <li><a href="JavaScript:;">商家中心</a></li>
+    </ul>
+    <div class="phone l">
+        <span></span>
+        <h3>400-688-***</h3>
+        <p>工作日 9:00 - 18:00</p>
+    </div>
+    <div class="copy">
+        <p>©2018. LSJ 版权所有</p>
+    </div>
+</section>
+<script src="./src/lib/jquery-3.3.1.js"></script>
+<script src="./src/lib/kkpager.min.js"></script>
+<script src="./src/template/template.js"></script>
+<script src="./src/script/index.js"></script>
+<script src="./src/script/right_nav.js"></script>
+<script src="./src/script/remberLogin.js"></script>
+<script type="text/html" id="brand_list_tpl">
+    {{each arr as value i}}
+    <li value="{{value.brandId}}" class="brandLi">
+        <a href="JavaScript:;"><img src="{{value.brandimg}}" class="l"></a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    // $.get('./index_brand.json', {}, function (resp) {
+    $.get('/project/ec/api/brand.php', {}, function (resp) {
+        var html = template('brand_list_tpl', {
+            arr: resp
+        });
+        $('.brand_phone').append(html);
+
+    })
+</script>
+<script type="text/html" id="price_tpl">
+    {{each arr as value i}}
+    <li value="{{value.priceId}}" class="priceLi">
+        <a href="JavaScript:;">{{value.price}}</a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $.get('./index_price.json', {}, function (resp) {
+        var html = template('price_tpl', {
+            arr: resp
+        });
+        $('.price_phone').append(html);
+    })
+</script>
+<script type="text/html" id="character_tpl">
+    {{each arr as value i}}
+    <li value="{{value.color}}" class="characterLi">
+        <a href="JavaScript:;">{{value.character}}</a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $.get('./index_character.json', {}, function (resp) {
+        var html = template('character_tpl', {
+            arr: resp
+        });
+        $('.character_phone').append(html);
+    })
+</script>
+<script type="text/html" id="internet_tpl">
+    {{each arr as value i}}
+    <li value="{{value.memory}}" class="internetLi">
+        <a href="JavaScript:;">{{value.internet}}</a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $.get('./index_internet.json', {}, function (resp) {
+        var html = template('internet_tpl', {
+            arr: resp
+        });
+        $('.internet_phone').append(html);
+    })
+</script>
+<script type="text/html" id="list_all_left_tpl">
+    {{each arr as value i}}
+    <li value="={{value.list_all_left}}" class="list_all_leftLi">
+        <div id="allList">{{value.id}}</div>
+        <figure class="list_img">
+            <a href="JavaScript:;"><img src="{{value.imgnormal}}" alt=""></a>
+            <figcaption><span>[店铺促销]</span><a href="JavaScript:;">{{value.title}}</a></figcaption>
+            <p class="price"><span>￥</span>{{value.price}}</p>
+            <p class="count"><span>销售量</span><em>{{value.sell}}</em></p>
+            <p class="comment"><span>评论数</span><em>{{value.comment}}</em></p>
+        </figure>
+
+    </li>
+    {{/each}}
+</script>
+<script>
+    $.get('/project/ec/api/products_list.php', {}, function (resp) {
+
+        var data = resp;
+
+        function getParameter(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+
+        //init
+        function init() {
+
+            var totalRecords = data.length; //共有多少条
+
+            var pageNum = 20; //一页显示多少条
+
+            var totalPage = Math.ceil(data.length / pageNum); //共有多少页
+
+            var pageNo = getParameter('pno'); //当前页
+
+            var count = 0;
+
+            if (!pageNo) {
+                pageNo = 1;
+            }
+
+            //生成分页
+            //有些参数是可选的，比如lang，若不传有默认值
+            kkpager.generPageHtml({
+                //当前页码
+                pno: pageNo,
+                //总页码
+                total: totalPage,
+                //总数据条数
+                totalRecords: totalRecords,
+
+                mode: 'click', //默认值是link，可选link或者click
+                click: function (n) {
+                    // do something
+                    //手动选中按钮
+                    //n当前页
+                    this.selectPage(n);
+
+                    //清空上一页
+                    $('.list_all_left').html('');
+                    //加载下一页
+                    toglePage((n - 1) * pageNum, n * pageNum);
+
+                    return false;
+                }
+            });
+
+            function toglePage(count, tolecount) {
+                var htmlContent = [];
+                for (let i = count; i < tolecount; i++) {
+                    if (i < data.length) {
+                        htmlContent.push(data[i])
+                    }
+
+                }
+
+                var html = template('list_all_left_tpl', {
+                    arr: htmlContent
+                });
+
+                $('.list_all_left').append(html);
+            };
+            //初始化
+            toglePage(count, pageNum);
+        };
+
+
+        init();
+
+    });
+</script>
+<script type="text/html" id="list_all_right_tpl">
+    {{each arr as value i}}
+    <li value="={{value.list_all_right}}" class="list_all_rightLi">
+        <div id="allRight">{{value.id}}</div>
+        <figure class="list_img">
+            <a href="JavaScript:;"><img src="{{value.imgnormal}}" alt=""></a>
+            <figcaption><span>[团购]</span><a href="JavaScript:;">{{value.title}}</a></figcaption>
+            <p class="price"><span>￥</span>{{value.price}}</p>
+        </figure>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $.get('/project/ec/api/products_list.php', {}, function (resp) {
+        // $.get('./index_list_right.json', {}, function (resp) {
+        var html = template('list_all_right_tpl', {
+            arr: resp
+        });
+        $('.list_all_right').append(html);
+    });
+</script>
+</body>
+</html>

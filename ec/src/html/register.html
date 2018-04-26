@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style/register.css" />
+</head>
+<body style="background: #f9f9f8">
+<div id="logo" class="w">
+    <h1 class="l"><img src="/project/ec/assets/imgs/registerimg/logo.png"></a></h1>
+    <h1 class="l"><img src="/project/ec/assets/imgs/registerimg/register.png"></h1>
+</div>
+<div id="main" class="w">
+    <div class="top">
+        <p class="l" style="color:red;font-size: 16px;">您好，感谢您加入~</p>
+        <a href="/project/ec/src/html/login.html" class="r"  style="color:#63625d;">如有账号，请点击 <span style="color:blue;">登录</span></a>
+    </div>
+    <div class="form">
+        <div class="label">
+            <div class="name l"><span>*</span> 用户名：</div>
+            <div class="input l">
+                <label><input type="text" placeholder="6-20位字符，支持字母、数字、下划线" id="user"></label>
+            </div>
+            <div class="hint hint1 l"></div>
+        </div>
+        <div class="label">
+            <div class="name l"><span>*</span> 登录密码：</div>
+            <div class="input l">
+                <label><input type="text" placeholder="6-20位字符，建议使用字母、符号和数字组合" id="pw"></label>
+            </div>
+            <div class="hint hint2 l"></div>
+        </div>
+        <div class="label">
+            <div class="name l"><span>*</span> 确认密码：</div>
+            <div class="input l">
+                <label><input type="text" placeholder="请再次输入密码" id="pass"></label>
+            </div>
+            <div class="hint hint3 l"></div>
+        </div>
+        <div class="label">
+            <div class="name l "><span>*</span> 手机号：</div>
+            <div class="input l">
+                <label><input type="text" placeholder="请输入11位手机号码" id="phone"></label>
+            </div>
+            <div class="hint hint4 l"></div>
+        </div>
+
+        <div class="label">
+            <div class="name l">电子邮箱：</div>
+            <div class="input l">
+                <label><input type="text" placeholder="请输入有效邮箱" id="email"></label>
+            </div>
+            <div class="hint hint5 l"></div>
+        </div>
+        <div class="label">
+            <div class="name l"><span>*</span> 地址：</div>
+            <div class="input l">
+                <label><input type="text" id="addr"></label>
+            </div>
+            <div class="hint l"></div>
+        </div>
+        <div class="label">
+            <div class="input l">
+                <label><input type="checkbox" checked style="width:20px;margin-left:142px;"></label>
+            </div>
+            <div class="name l">我已阅读并同意</div>
+            <div class="hint l"><a href="javascript:;" style="color:blue;">《会员注册协议》</a></div>
+        </div>
+        <button style="cursor:pointer;background:#db2e2e;color:#fff;font-size:16px;width:300px;height:38px;border:0;margin-left: 256px;">立即注册 完成绑定</button>
+    </div>
+</div>
+<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
+<script src="../script/register.js"></script>
+</body>
+</html>

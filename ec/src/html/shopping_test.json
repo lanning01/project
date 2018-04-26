@@ -1,0 +1,38 @@
+[
+  {
+    "img":"/assets/imgs/1.jpg",
+    "describe": "好东西",
+    "color":"red",
+    "price_before":150,
+    "price": 50,
+    "count": 20
+  },
+  {
+    "describe": "好东西",
+    "color":"red",
+    "price_before":150,
+    "price": 50,
+    "count": 20
+  },
+  {
+    "describe": "好东西",
+    "color":"red",
+    "price_before":150,
+    "price": 50,
+    "count": 20
+  },
+  {
+    "describe": "好东西",
+    "color":"red",
+    "price_before":150,
+    "price": 50,
+    "count": 20
+  },
+  {
+    "describe": "好东西",
+    "color":"red",
+    "price_before":150,
+    "price": 50,
+    "count": 20
+  }
+]

@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+@import "common";
+/*-------------------------------------*/
+
+.w{
+  width:990px;
+  margin:0 auto;
+}
+#shopping{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #ddd;
+}
+#shopping .w h1{
+  width: 170px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+#shopping .w p.name{
+  width: 170px;
+  height: 44px;
+  line-height: 44px;
+  color: #666;
+  font-size: 22px;
+  margin: 30px 0 0 10px;
+  text-align: center;
+}
+#shopping .w p.load{
+  width: auto;
+  height: 24px;
+  line-height: 24px;
+  color: #333;
+  margin: 60px 4px 0 0;
+}
+#shopping .w p.load a{
+  color: #e6133c;
+  font-weight: 700;
+}
+
+#allCenter .cart-title{
+  width: 990px;
+  height: 51px;
+  border-bottom: 1px solid #ccc;
+}
+#allCenter .cart-title .name{
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 6px;
+  margin-top: 18px;
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+}
+#allCenter .cart-title .name span{
+  color: #e6133c;
+  margin-left: 4px;
+}
+#allCenter .cart-title .pay-message{
+  width: auto;
+  height: 48px;
+  line-height: 48px;
+  margin-top: 3px;
+  color: #000;
+}
+#allCenter .cart-title .pay-message span.favorable{
+  color: #999;
+  line-height:48px;
+}
+#allCenter .cart-title .pay-message span.reduce{
+  color: #333;
+  margin-right: 10px;
+}
+#allCenter .cart-title .pay-message span.price{
+  color: #d62233;
+  font-size: 16px;
+  font-weight: 700;
+}
+#allCenter .cart-title .pay-message button{
+  height: 26px;
+  background: #bbb;
+  width: 70px;
+  color: #fff;
+  font-size: 12px;
+  border:0;
+  cursor: pointer;
+  text-align: center;
+  outline: 0;
+}
+#allCenter .cart-table .cart-head{
+  height: 44px;
+  line-height: 44px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+#allCenter .cart-table .cart-head label{
+  width: 50px;
+  height: 44px;
+  line-height: 44px;
+  margin-left: 15px;
+}
+#allCenter .cart-table .cart-head label input{
+  margin-top: 17px;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+#allCenter .cart-table .cart-head label span{
+  height: 44px;
+  line-height: 44px;
+  margin-left: 10px;
+}
+#allCenter .cart-table .cart-head .item{
+  width: 390px;
+  height: auto;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  margin-left: 80px;
+}
+#allCenter .cart-table .cart-head .item-price{
+  width: 138px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+}
+#allCenter .cart-table .cart-head .number{
+  width: 102px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+}
+#allCenter .cart-table .cart-head .total-price{
+  width: 132px;
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+}
+#allCenter .cart-table .cart-head .action{
+  height: auto;
+  height: 44px;
+  line-height: 44px;
+}
+#allCenter .cart-table .no-points{
+  height: 200px;
+  background: url("../project/ecs/resouse/img/shopping/empty.png") no-repeat 300px center;
+  display: block;
+}
+#allCenter .cart-table .no-points .empty{
+  margin-left:400px;
+  margin-top:85px;
+
+}
+#allCenter .cart-table .no-points .empty p:nth-of-type(1){
+  font-size: 16px;
+  color:#666;
+}
+#allCenter .cart-table .no-points .empty p:nth-of-type(2){
+  font-size: 12px;
+  color:#666;
+}
+#allCenter .cart-table .no-points .empty p a{
+  color:#0077d7;
+}
+//#allCenter .list ul{
+//  height: 800px;
+//  background: #f60;
+//}
+#allCenter .list ul li{
+  padding:20px;
+  border-bottom: 1px solid #ccc;
+  background: #fffaf1;
+  height: 110px;
+}
+#allCenter .list ul li input.i1{
+  background: #d62233;
+  margin: 15px 0;
+}
+#allCenter .list ul li .product{
+  padding: 15px 10px 14px;
+}
+#allCenter .list ul li .product img{
+  width: 78px;
+  height: 78px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+#allCenter .list ul li .type-box{
+  width: 300px;
+  height: 80px;
+  padding: 15px 10px 14px;
+  overflow: hidden;
+  margin-left: 50px;
+}
+#allCenter .list ul li .type-box .line{
+  width: 100%;
+  height: 50px;
+  line-height: 18px;
+  color: #999;
+  overflow: hidden;
+  //white-space: nowrap;
+  //text-overflow: ellipsis;
+}
+
+#allCenter .list ul li .item-price-box{
+  width: 120px;
+  height: 80px;
+  line-height: 18px;
+  margin: 15px 0 0 15px;
+}
+#allCenter .list ul li .item-price-box p{
+  width: 120px;
+  height: 18px;
+  line-height: 18px;
+  color: #999;
+}
+#allCenter .list ul li .item-price-box .price{
+  width: 120px;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  display: inline;
+  color: #000;
+}
+#allCenter .list ul li .item-price-box .blink{
+  width: 30px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  background: #efae00;
+}
+#allCenter .list ul li .number-box{
+  width: 80px;
+  height: 60px;
+  line-height: 18px;
+  color: #333;
+  margin-top: 15px;
+  position: relative;
+}
+#allCenter .list ul li .number-box em{
+  width: 17px;
+  height: 24px;
+  line-height: 24px;
+  background: #f0f0f0;
+  margin-top: 2px;
+  border: 1px solid #eee;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  font-style:normal;
+}
+#allCenter .list ul li .number-box input{
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid #aaa;
+  color: #333;
+  text-align: center;
+  margin-top: 2px;
+}
+#allCenter .list ul li .price-box{
+  width: 100px;
+  height: 80px;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+#allCenter .list ul li .price-box .price{
+  width: 100px;
+  height: 18px;
+  line-height: 18px;
+  color: #d62233;
+  font-weight: 700;
+  overflow: hidden;
+}
+#allCenter .list ul li .action-box{
+  width: 62px;
+  height: 80px;
+  margin-left: 30px;
+  line-height: 18px;
+  margin-top: 15px;
+}
+#allCenter .list ul li .action-box a:nth-of-type(1){
+  color: #333;
+}
+#allCenter .list ul li .action-box a:nth-of-type(2){
+  color: #999;
+}
+#foot .w div{
+  width:177px;
+}
