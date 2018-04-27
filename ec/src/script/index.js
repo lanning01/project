@@ -104,7 +104,7 @@ window.onload = function () {
             return el.currentStyle[property]
         }
     }
-    function lunBo () {
+    function BannerlunBo () {
         let index = 0;
         let items = document.querySelectorAll('.list .item');
         let id;
@@ -191,5 +191,114 @@ window.onload = function () {
 
         init();
     };
-    lunBo();
+    BannerlunBo();
+
+    function teamBuy() {
+        let index = 1;
+        let list = document.querySelector('.team-buying-three');
+        let liWidth = list.children[0].offsetWidth;
+
+        let slider1 = document.querySelector('.team-buying-three .item:first-of-type');
+        let sliderLast = document.querySelector('.team-buying-three .item:last-of-type');
+
+        let slider1_cloned = slider1.cloneNode(true)
+        let sliderLast_cloned = sliderLast.cloneNode(true);
+
+        list.appendChild(slider1_cloned);
+        list.insertBefore(sliderLast_cloned, slider1);
+
+
+        list.style.width = liWidth * list.childElementCount + 'px';
+        list.style.left = -liWidth * index + 'px';
+        let id;
+
+
+        function slideTo(idx) {
+//            console.log(idx);
+            if (idx === list.childElementCount) {
+                list.style.left = -liWidth + 'px';
+                index = idx = 2;
+            }
+
+
+            //代码大全
+            if (-1 === idx) {
+                list.style.left = (list.childElementCount - 2) * -liWidth + 'px';
+                index = idx = list.childElementCount - 3;
+            }
+
+            var left = idx * liWidth;
+            console.log(idx)
+
+            // var focusIndex = idx - 1;
+            // if (list.childElementCount - 1 === idx) {
+            //     focusIndex = 0;
+            // }
+            // if (idx === 0) {
+            //     focusIndex = document.querySelectorAll('.bullet').length - 1;
+            // }
+            // document.querySelector('.focus').className = 'bullet';
+
+            // document.querySelectorAll('.bullet')[focusIndex].className = 'bullet focus';
+            animation(list, {
+                left: -1 * left
+            })
+        }
+
+        function slideNext() {
+            index++;
+            slideTo(index);
+        }
+
+        function slidePrev() {
+            index--;
+            slideTo(index);
+        }
+
+        function init() {
+            document.querySelector('.next1').onclick = function () {
+                slideNext();
+            }
+
+            document.querySelector('.prev1').onclick = function () {
+                slidePrev();
+            }
+
+            document.querySelector('.team-buying-bottom').onmouseover = function () {
+                stop();
+            }
+
+            document.querySelector('.team-buying-bottom').onmouseout = function () {
+                autoPlay();
+            }
+
+            //监听子弹点击事件
+            // let bullets = document.querySelectorAll('.bullet');
+            // for (let i = 0; i < bullets.length; i++) {
+            //     bullets[i].onclick = function () {
+            //         index = i;
+            //         slideTo(index);
+            //     }
+            // }
+
+            autoPlay();
+        }
+
+        function autoPlay() {
+            id = setInterval(slideNext, 2500);
+        }
+
+        function stop() {
+            clearInterval(id)
+        }
+
+        init();
+
+    };
+    teamBuy();
+    $('.team-buying-three').on('mouseover','.btn1',function(){
+        $('.btn1').show();
+    }).on('mouseout','.btn1',function(){
+        $('.btn1').hide();
+    })
 }

@@ -1172,36 +1172,70 @@ nav .pagination .bullet.focus {
   text-indent: 8px;
 }
 
-.team-buying-three {
-  display: flex;
+.team-buying-bottom {
+  width: 1200px;
   height: 173px;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-buying-bottom .team-buying-three {
+  height: 173px;
+  list-style: none;
+  position: absolute;
   width: 100%;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: space-between;
 }
 
-.team-one {
-  position: relative;
-  background: blue;
+.team-buying-bottom .team-buying-three .item {
   width: 399px;
+  height: 173px;
+  text-align: center;
+  float: left;
 }
 
-.team-one img, .team-two img, .team-three img {
+.team-buying-bottom .team-buying-three .item img {
   width: 399px;
   height: 173px;
 }
 
-.team-two {
-  position: relative;
-  background: green;
-  width: 399px;
+.btn1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
 }
 
-.team-three {
-  position: relative;
-  background: gray;
-  width: 399px;
+.next1 {
+  position: absolute;
+  right: 0px;
+}
+
+.team-buying-bottom .pagination {
+  position: absolute;
+  bottom: 30px;
+  list-style: none;
+}
+
+.team-buying-bottom .pagination .bullet {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  float: left;
+  margin-left: 3px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.team-buying-bottom .pagination .bullet.focus {
+  background: black;
+  color: white;
 }
 
 /*----------------phone_brand----------------*/
