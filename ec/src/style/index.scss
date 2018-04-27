@@ -199,6 +199,7 @@
 
 .nav-nav {
   float: left;
+  z-index: 20;
 }
 
 .nav-nav li {
@@ -207,6 +208,7 @@
   line-height: 38px;
   padding: 0 20px;
   font-size: 20px;
+  z-index: 20;
 }
 
 .nav-nav li:hover a {
@@ -217,11 +219,71 @@
   color: red;
 }
 
-nav img {
+nav .slider .list {
+  list-style: none;
+}
+
+nav .slider {
+  position: relative;
   width: 100%;
   height: 400px;
 }
 
+nav .slider .list .item {
+  margin-top: 38px;
+  position: absolute;
+  opacity: 0;
+  width:100%;
+}
+
+nav .slider .list .item:first-of-type {
+  opacity: 1;
+}
+
+nav .slider .list .item img {
+  display: block;
+  width:100%;
+  height:400px;
+}
+
+nav .btn {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav .next {
+  right:25px;
+}
+
+nav .pagination {
+  position: absolute;
+  bottom: 0px;
+  right:50%;
+}
+
+nav .pagination .bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  background: #ff6600;
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  border: 3px solid white;
+  border-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+nav .pagination .bullet.focus {
+  /*transition: transform .5s linear;*/
+  transform: scale(1.2);
+  background: purple;
+}
 /*-----------team-buying-----------*/
 #team-buying {
   height: 254px;
@@ -230,7 +292,6 @@ nav img {
 
 .team-buying {
   height: 220px;
-  background: #f60;
   padding-top: 34px;
 }
 
@@ -274,7 +335,7 @@ nav img {
   background: blue;
   width: 399px;
 }
-
+.team-one img,.team-two img,.team-three img{width: 399px; height: 173px;}
 .team-two {
   position: relative;
   background: green;
