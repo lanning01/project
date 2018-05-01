@@ -108,7 +108,7 @@
   height: 38px;
   width: 100px;
   line-height: 38px;
-  background: #09F;
+  background: #ec3639;
   display: inline-block;
 }
 
@@ -123,17 +123,22 @@
 .first a {
   display: block;
   text-decoration: none;
-  color: #ff0;
+  color: white;
+}
+.third a {
+  text-decoration: none;
+  color: #000;
 }
 
 .first a:hover {
-  background: #066;
+  background: #fff;
+  color: black;
 }
 
 .second {
   height: 400px;
   width: 100px;
-  background: #936;
+  background: #454545;
   position: absolute;
   z-index: 2;
 }
@@ -152,10 +157,11 @@
 .third {
   height: 400px;
   width: 600px;
-  background: hotpink;
+  background:#fff;
   position: absolute;
   display: none;
   z-index: 2;
+  box-shadow: 1px 1px 10px #888888;
 }
 
 .t1 {
@@ -249,14 +255,16 @@ nav .slider .list .item img {
 nav .btn {
   position: absolute;
   top: 50%;
-  font-size: 40px;
+  font-size: 80px;
   z-index: 10;
   cursor: pointer;
   user-select: none;
 }
-
+nav .prev{
+  left:300px;
+}
 nav .next {
-  right:25px;
+  right:200px;
 }
 
 nav .pagination {
@@ -284,48 +292,40 @@ nav .pagination .bullet.focus {
   transform: scale(1.2);
   background: purple;
 }
+
 /*-----------team-buying-----------*/
-#team-buying {
-  height: 254px;
-  width: 100%;
-}
-
-.team-buying {
-  height: 220px;
-  padding-top: 34px;
-}
-
-.team-buying-top {
-  position: relative;
-  height: 36px;
-  margin: 0 0 10px;
-  padding: 0 0 0 40px;
-  line-height: 36px;
-}
-
-.team-buying-top h2, .team-buying-top p {
-  display: inline-block
-}
-
-.team-buying-top span {
-  display: block;
-  width: 37px;
-  height: 37px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("/project/ec/assets/imgs/indeximg/home-icons.png") no-repeat -137px 3px;
-}
-
-.team-buying-top p {
-  text-indent: 8px;
-}
-
 .team-buying-bottom {
   width: 1200px;
   height: 173px;
   position: relative;
   overflow: hidden;
+}
+.team-buying-three .item1 .team-one{
+  background: #fff6dd;
+}
+.team-buying-three .item1 .team-two{
+  background: #ffe5e5;
+}
+.team-buying-three .item1 .team-three{
+  background: #e3f9ff;
+}
+.team-buying-three .item1 .team-four{
+  background:  #fff6dd;
+}
+.team-buying-three .item1 .team-five{
+  background: #ffe5e5;
+}
+.team-buying-three .item1 .team-six{
+  background: #e3f9ff;
+}
+.team-buying-three .item1 .team-seven{
+  background:  #fff6dd;
+}
+.team-buying-three .item1 .team-eight{
+  background: #ffe5e5;
+}
+.team-buying-three .item1 .team-nine{
+  background: #e3f9ff;
 }
 
 .team-buying-bottom .team-buying-three {
@@ -338,30 +338,272 @@ nav .pagination .bullet.focus {
   align-content: space-between;
 }
 
-.team-buying-bottom .team-buying-three .item {
+.team-buying-three .item1{
   width: 399px;
   height: 173px;
-  text-align: center;
   float: left;
 }
-
-.team-buying-bottom .team-buying-three .item img {
+.team-buying-three .item1 dd{
+  width: 200px;
+  padding:15px;
+  float: left;
+}
+.team-buying-three .item1 dd{
+  width: 170px;
+  padding:15px;
+  float: left;
+  padding-left: 30px;
+}
+.team-buying-three .item1 dd h3{
+  padding-top: 30px;
+}
+.team-buying-three .item1 dd h4{
+  padding-top: 10px;
+}
+.team-buying-three .item1 dd p{
+  padding-top: 30px;
+}
+.team-buying-three .team-one dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-one dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-two dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-two dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}.team-buying-three .team-three dt{
+   float: right;
+   position: relative;
+   width:169px;
+   height: 173px;
+ }
+.team-buying-three .team-three dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}.team-buying-three .team-four dt{
+   float: right;
+   position: relative;
+   width:169px;
+   height: 173px;
+ }
+.team-buying-three .team-four dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-five dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-five dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-six dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-six dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-seven dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-seven dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-eight dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-eight dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-buying-three .team-nine dt{
+  float: right;
+  position: relative;
+  width:169px;
+  height: 173px;
+}
+.team-buying-three .team-nine dt img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.team-one,.team-two,.team-three,.team-four,.team-five,.team-six,.team-seven,.team-eight,.team-nine{
+  position: relative;
+  height: 173px;
+  width: 399px;
+}
+.one-black,.two-black,.three-black,.four-black,.five-black,.six-black,.seven-black,.eight-black,.nine-black{
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  /*top: 100%;*/
+  bottom: 0px;
+  /*display:block;*/
   width: 399px;
   height: 173px;
+  float: left;
+  background: rgba(51,51,51,.89);
+}
+.team-buying-three figure{
+  height: 137px;
+  width: 137px;
+  float: left;
+  position:relative;
+}
+.team-buying-three figure p{
+  height: 36px;
+  line-height: 36px;
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  bottom: -23px;
+  left: 17px;
+  cursor: pointer;
+}
+.team-buying-three figure img{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  border-radius: 50%;
+}
+.team-buying-three figcaption{
+  float: left;
+  padding-left: 30px;
+  width: 230px;
+  height: 100%;
+}
+.team-buying-three figcaption h3{
+  letter-spacing:3px;
+  margin-top: 30px;
+  color: white;
+  font-size: 15px;
+}
+.team-buying-three figcaption h4{
+  letter-spacing:3px;
+  font-size: 12px;
+  margin-top: 17px;
+  color: white;
+}
+.team-buying-three figcaption a{
+  letter-spacing:3px;
+  font-size: 12px;
+  margin-top: 10px;
+  color: white;
+  background: #f33;
+  border: #f33;
+  width: 72px;
+  height: 27px;
+  display:block;
+  text-decoration: none;
+  line-height: 27px;
+  text-align: center;
+  margin-top: 17px;
 }
 
 .btn1 {
-  display: none;
   position: absolute;
-  top: 50%;
+  top: 35%;
   font-size: 40px;
   cursor: pointer;
   user-select: none;
+  background: #ccc;
+  display: none;
 }
 
 .next1 {
-  position: absolute;
-  right: 0px;
+  right: 0;
 }
 
 .team-buying-bottom .pagination {
@@ -387,6 +629,27 @@ nav .pagination .bullet.focus {
   color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------phone_brand----------------*/
 #phone_brand {
   height: 249px;
@@ -409,7 +672,6 @@ nav .pagination .bullet.focus {
 .brand .brand_phone {
   height: 127px;
   width: 1068px;
-  background: red;
   display: inline-block;
   padding-top: 10px;
   padding-left: 20px;
@@ -457,7 +719,6 @@ nav .pagination .bullet.focus {
   height: 38px;
   line-height: 38px;
   width: 1068px;
-  background: green;
   display: inline-block;
   padding-left: 20px;
 }
@@ -485,7 +746,6 @@ nav .pagination .bullet.focus {
   height: 38px;
   line-height: 38px;
   width: 1068px;
-  background: blue;
   display: inline-block;
   padding-left: 20px;
 }
@@ -513,7 +773,6 @@ nav .pagination .bullet.focus {
   height: 38px;
   line-height: 38px;
   width: 1068px;
-  background: hotpink;
   display: inline-block;
   padding-left: 20px;
 }

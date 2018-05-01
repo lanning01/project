@@ -104,7 +104,7 @@ window.onload = function () {
             return el.currentStyle[property]
         }
     }
-    function BannerlunBo () {
+    function bannerLunBo () {
         let index = 0;
         let items = document.querySelectorAll('.list .item');
         let id;
@@ -191,44 +191,55 @@ window.onload = function () {
 
         init();
     };
-    BannerlunBo();
+    bannerLunBo();
 
     function teamBuy() {
-        let index = 1;
+        let index = 0;
         let list = document.querySelector('.team-buying-three');
         let liWidth = list.children[0].offsetWidth;
 
-        let slider1 = document.querySelector('.team-buying-three .item:first-of-type');
-        let sliderLast = document.querySelector('.team-buying-three .item:last-of-type');
+        let slider1 = document.querySelector('.team-buying-three .item1:first-of-type');
+        let slider2 = document.querySelector('.team-buying-three .item1:nth-of-type(2)');
+        let slider3 = document.querySelector('.team-buying-three .item1:nth-of-type(3)');
+        let slider7 = document.querySelector('.team-buying-three .item1:nth-of-type(7)');
+        let slider8 = document.querySelector('.team-buying-three .item1:nth-of-type(8)');
+        let slider9 = document.querySelector('.team-buying-three .item1:nth-of-type(9)');
 
-        let slider1_cloned = slider1.cloneNode(true)
-        let sliderLast_cloned = sliderLast.cloneNode(true);
+        let slider1_cloned = slider1.cloneNode(true);
+        let slider2_cloned = slider2.cloneNode(true);
+        let slider3_cloned = slider3.cloneNode(true);
+        let slider7_cloned = slider7.cloneNode(true);
+        let slider8_cloned = slider8.cloneNode(true);
+        let slider9_cloned = slider9.cloneNode(true);
 
         list.appendChild(slider1_cloned);
-        list.insertBefore(sliderLast_cloned, slider1);
+        list.appendChild(slider2_cloned);
+        list.appendChild(slider3_cloned);
+        list.insertBefore(slider7_cloned, slider1);
+        list.insertBefore(slider8_cloned, slider1);
+        list.insertBefore(slider9_cloned, slider1);
 
 
         list.style.width = liWidth * list.childElementCount + 'px';
-        list.style.left = -liWidth * index + 'px';
+        list.style.left = -3 * liWidth * index + 'px';
         let id;
 
 
         function slideTo(idx) {
 //            console.log(idx);
-            if (idx === list.childElementCount) {
+            if (idx >= list.childElementCount) {
                 list.style.left = -liWidth + 'px';
-                index = idx = 2;
+                index = idx = 3;
             }
 
 
-            //代码大全
-            if (-1 === idx) {
-                list.style.left = (list.childElementCount - 2) * -liWidth + 'px';
-                index = idx = list.childElementCount - 3;
+            if (idx <= -1) {
+                list.style.left = (list.childElementCount - 3) * -liWidth + 'px';
+                index = idx = list.childElementCount - 9;
             }
 
             var left = idx * liWidth;
-            console.log(idx)
+            console.log("IDX"+idx)
 
             // var focusIndex = idx - 1;
             // if (list.childElementCount - 1 === idx) {
@@ -246,12 +257,12 @@ window.onload = function () {
         }
 
         function slideNext() {
-            index++;
+            index+=3;
             slideTo(index);
         }
 
         function slidePrev() {
-            index--;
+            index-=3;
             slideTo(index);
         }
 
@@ -296,9 +307,25 @@ window.onload = function () {
 
     };
     teamBuy();
-    $('.team-buying-three').on('mouseover','.btn1',function(){
+    function teamChoose(x,y){
+        $(x).hover(function () {
+            $(y).show().stop().animate({height:"173px"});
+        }, function () {
+            $(y).stop().animate({height:"0px"});
+        });
+    }
+    teamChoose(".team-one",".one-black");
+    teamChoose(".team-two",".two-black");
+    teamChoose(".team-three",".three-black");
+    teamChoose(".team-four",".four-black");
+    teamChoose(".team-five",".five-black");
+    teamChoose(".team-six",".six-black");
+    teamChoose(".team-seven",".seven-black");
+    teamChoose(".team-eight",".eight-black");
+    teamChoose(".team-nine",".nine-black");
+    $('.team-buying-bottom').on('mouseover',function(){
         $('.btn1').show();
-    }).on('mouseout','.btn1',function(){
+    }).on('mouseout',function(){
         $('.btn1').hide();
     })
 }
