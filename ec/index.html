@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="./src/style/index.css"/>
+    <link rel="stylesheet" href="assets/iconfont/iconfont.css"/>
     <!--<link rel="stylesheet" href="./bootstrap/library/css/bootstrap.css">-->
     <!--<link rel="stylesheet" href="./bootstrap/library/css/bootstrap-theme.css">-->
 </head>
@@ -16,7 +17,7 @@
             <span class="exit"><a href="JavaScript:;">免费注册</a></span>
         </div>
         <ul class="quick-menu r">
-            <li><a href="JavaScript:;">我的订单</a></li>
+            <li><a href="/ec/src/html/shopping.html">我的订单</a></li>
             <li><a href="JavaScript:;">购物车0件</a></li>
             <li><a href="JavaScript:;">帮助中心</a></li>
             <li><a href="JavaScript:;">手机商城<i class="ico1"></i></a></li>
@@ -288,10 +289,9 @@
 
             <div class="toolbar-tabs J-tab">
                 <div class="toolbar-tab tbar-tab-cart">
-                    <i class="tab-ico"></i>
-
-                    <span class="tab-sub J-count ">1</span>
-                    <em class="tab-text">我的关注</em></div>
+                    <i class="tab-ico icon-wodedingdan"></i>
+                    <span class="tab-sub J-count">1</span>
+                    <em class="tab-text">我的订单</em></div>
                 <div class="toolbar-tab tbar-tab-follow">
                     <i class="tab-ico"></i>
                     <em class="tab-text">我的关注</em>
@@ -596,9 +596,9 @@
         <li><a href="JavaScript:;">发货地</a><span></span></li>
         <li class="price_search">
             <div class="visible">
-            <input type="text" value="" placeholder="￥" class="low input ">
-            <p class="xian">-</p>
-            <input type="text" value="" placeholder="￥" class="input high"><br>
+                <input type="text" value="" placeholder="￥" class="low input ">
+                <p class="xian">-</p>
+                <input type="text" value="" placeholder="￥" class="input high"><br>
 
                 <p class="enter">确定</p>
                 <p class="clear">清除</p>
@@ -852,13 +852,40 @@
     {{/each}}
 </script>
 <script>
+	
+	var all;
     $.get('/project/ec/api/products_list.php', {}, function (resp) {
         // $.get('./index_list_right.json', {}, function (resp) {
+        	all = resp;
         var html = template('list_all_right_tpl', {
             arr: resp
         });
         $('.list_all_right').append(html);
     });
+    $('#sure').click(function(){
+    	var fin = [];
+    	var b = parseInt($('.before').val());
+    	var a = parseInt($('.after').val());
+    	
+    	if(!b|| !a ){
+    		alert('请输入最大或最小价格');
+    	}else{
+    		for(var i =0;i<all.length;i++){
+    			console.log(all[i])
+    			if(parseInt(all[i].price) >= b && parseInt(all[i].price) <=a){
+
+    				fin.push(all[i]);
+    			}
+    		}
+    		$('.list_all_left').html("");
+    		var html = template('list_all_left_tpl', {
+           		 arr: fin
+	        });
+	        $('.list_all_left').append(html);
+	    	}
+    	
+    })
+    
 </script>
 </body>
 </html>

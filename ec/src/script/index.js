@@ -1,9 +1,48 @@
+// window.onload = function () {
+//     $(function () {
+//         var min_height = 850;
+//         $(window).scroll(function () {
+//             var s = $(window).scrollTop();
+//             if (s > min_height) {
+//                 if (s > min_height) {
+//                     $('#logo-search-bar').css({
+//                             display: `block`
+//                         }
+//                     )
+//                 }
+//             } else if (s < min_height) {
+//                 if (s < min_height) {
+//                     $('#logo-search-bar').css({
+//                             display: `none`
+//                         }
+//                     )
+//                 }
+//             }
+//         })
+//     })
+//     $('.return_top').click(function(){
+//         $(window).scrollTop(0);
+//     });
+//
+//     $('.list_all_left').on('click','li',function(){
+//         var id = $(this).children('#allList').text();
+//         location = './src/html/details.html?productId='+id;
+//     });
+//
+//     $('.list_all_right').on('click','li',function(){
+//         var id = $(this).children('#allRight').text();
+//         location = './src/html/details.html?productId='+id;
+//     });
+// }
+
+
+
 window.onload = function () {
 
     function priceSearch(){
         $('.visible').on('mouseover',function(){
             $('.phone_list_ul').css({
-               overflow:'visible',
+                overflow:'visible',
 
             })
             $('.visible').css({
@@ -239,7 +278,7 @@ window.onload = function () {
             }
 
             var left = idx * liWidth;
-            console.log("IDX"+idx)
+            // console.log("IDX"+idx)
 
             // var focusIndex = idx - 1;
             // if (list.childElementCount - 1 === idx) {

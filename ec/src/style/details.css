@@ -1068,6 +1068,8 @@ nav {
   display: inline-block;
   line-height: 50px;
   padding-right: 20px;
+  color: #fff;
+  font-size: 14px;
 }
 
 .details_info .price {

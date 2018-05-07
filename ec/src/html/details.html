@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../style/details.css">
+    <style>
+    	.imgFive img{
+    		border: 1px solid transparent;
+    		margin:0px 4px!important
+    	}
+    	.imgFive img.active{
+    		border: 1px solid red;
+    	}
+    </style>
 </head>
 <body>
 <header>
     <div class="user-info w">
         <div class="login-info l">
             <span><a href="javaScript:;">商城首页</a></span>
-            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="javaScript:;">登录</a></span></div>
+            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="./login.html">登录</a></span></div>
             <span class="exit"><a href="javaScript:;">免费注册</a></span>
         </div>
         <ul class="quick-menu r">
-            <li><a href="javaScript:;">我的订单</a></li>
-            <li><a href="javaScript:;">购物车0件</a></li>
+            <li><a href="myOrder.html">我的订单</a></li>
+            <li><a href="./shopping.html">购物车0件</a></li>
             <li><a href="javaScript:;">帮助中心</a></li>
             <li><a href="javaScript:;">手机商城<i class="ico1"></i></a></li>
             <li><a href="javaScript:;">中关村在线</a></li>
@@ -502,40 +511,12 @@
         <img src="{{arr.imgbig}}" alt="">
     </div>
 </script>
-<script>
-    // $.get('./magnifier.json', {}, function (resp) {
-    /* $.get('/project/ec/api/details.php', {}, function (resp) {
-
-        var html = template('img_tpl', {
-            arr: resp
-        });
-        $('.details_pic').append(html);
-
-
-
-    })*/
-</script>
-<!--<script type="text/html" id="introduce_tpl">-->
-    <!--{{each arr as value i}}-->
-        <!--<img src="{{arr.introduce_img}}" alt="">-->
-    <!--{{/each}}-->
-<!--</script>-->
-<!--<script>-->
-    <!--$.get('./introduce.json', {}, function (resp) {-->
-        <!--var html = template('introduce_tpl', {-->
-            <!--arr: resp-->
-        <!--});-->
-        <!--$('.introduce').append(html);-->
-    <!--})-->
-<!--</script>-->
 <script type="text/html" id="info_tpl">
     <h3>{{arr.title}}</h3>
     <div class="group_time">
         <h2 class="l">团购</h2>
         <div class="group_time_over r">
-            距离结束仅剩 <span>{{arr.day}}天</span>
-            <span>{{arr.hour}}时</span><span>{{arr.minute}}分</span>
-            <span>{{arr.second}}秒</span>
+
         </div>
     </div>
     <div class="price">团购价:<span style="color: #cc0000; font-size:14px">￥</span>
@@ -597,8 +578,9 @@
         <input type="text" value="1" class="l countNum"/>
         <span class="add l">+</span>&nbsp;&nbsp;件
     </div>
-    <button class="button2">立刻购买</button>
+    <button class="button2" data-id = {{arr.id}}>立刻购买</button>
     <button class="button3"><div id="cart_buy">{{arr.id}}</div>加入购物车</button>
 </script>
+
 </body>
 </html>

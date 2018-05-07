@@ -19,7 +19,7 @@
         <img src="/project/ec/assets/imgs/loginimg/promise.jpg" alt="">
     </div>
     <div class="login-right l">
-        <h3 class="user l">用户登录</h3>
+        <h3 class="user l">管理员登录</h3>
         <input type="text" value="" id="user" placeholder="请输入用户名" class="l user-login">
         <input type="text" value="" id="pw" placeholder="请输入密码" class="l seller-login">
         <button l>登 录</button>
@@ -48,7 +48,7 @@
 	        if(resp.ret) {
 	            //登录成功
 	            document.cookie='userid='+resp.userid;
-	            location = '/project/ec/index.html';
+	            location = '/project/ec/src/html/indexM.html';
 	        } else {
 	            //登录失败
 	            alert('登录失败');

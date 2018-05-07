@@ -1,4 +1,14 @@
 window.onload = function () {
+	var price;
+    var price_before;
+    var obj;
+    var name = getQueryString('productId');
+    var s;
+    var x;
+	//获取所选颜色与型号
+	
+	
+	
     function getQueryString(name) {
         var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
         if (result == null || result.length < 1) {
@@ -7,9 +17,7 @@ window.onload = function () {
         return result[1];
     }
 
-    var price;
-    var price_before;
-    var name = getQueryString('productId');
+   
     $.ajax({
         url: '/project/ec/api/products_details.php?',
         type: 'get',
@@ -17,6 +25,9 @@ window.onload = function () {
             id: name
         },
         success: function (resp) {
+        	obj = JSON.stringify(resp)
+			//encodeURI(obj)
+
             price = resp.price;
             price_before = resp.price_before;
             // console.log(resp);
@@ -32,15 +43,20 @@ window.onload = function () {
             });
             $('.details_info').append(htmls);
 
+            s = $('.details_info .color .red').text();
+            x = $('.details_info .memory .red').text();
+            addOrder();
             allButtonNone();
             picChange();
             bigPic();
-            buttonChange('.details_info .color span');
-            buttonChange('.details_info .memory span');
             memMoney();
             countSum();
+            addCart();
             provinceChange();
             cartBuy();
+            getNowDate();
+            setInterval(getNowDate, 1000);
+            
         },
         error: function (xhr) {
 
@@ -57,7 +73,19 @@ window.onload = function () {
 
 
     }
-
+    function getNowDate() {
+        var timerD = 33;
+        var timerH = 24;
+        var timerM = 59;
+        var timerS = 59;
+        var now = new Date();
+        var date = now.getDate();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var timer = '该商品距离活动结束还有' + (timerD - date) + '天' + (timerH - hours) + '小时' + (timerM - minutes) + '’' + (timerS - seconds) + '”';
+        $('.group_time_over').html(timer);
+    }
     function bigPic() {
         $('.details_pic .small')
             .mouseover(function () {
@@ -129,47 +157,49 @@ window.onload = function () {
         });
     }
 
+
+	function addOrder(){
+		 $('.button2').on('click',function () {
+            var id = this.dataset.id;
+            var count = $('.countNum').val();
+            var price = $('.pricenow').html();
+            if(x === ""){
+            	alert('请选择内存型号');
+            }else{
+            	location = './order.html?productId=' + id +'&count='+count+'&color='+s+'&xing='+x+'&price='+price+'&obj='+obj
+            }
+        });
+		
+	}
+
+
     function allButtonNone() {
-        /*
-                alert($(".allButton span").length)
-        */
-        // $(".allButton span").eq(4).parent().remove()
-        // console.log($(".allButton span").eq(4).html() === '<i></i>')
-        // console.log($(".allButton span").eq(4).html())
+
         for (var i = 0; i < $(".allButton span").length; i++) {
 
 
             if ($(".allButton span").eq(i).html() === '<i></i>') {
-
-
+					
                 $(".allButton span").eq(i).parent().remove();
                 i--;
 
             }
         }
-        /*
-        */
-        // console.log($('.allButton span').html());
-        /* $(".allButton span:empty").css({
-             display:'none'
-         });*/
-
-
+       
     }
 
-    // function buttonChange() {
-    //     $('.details_info .color span').click(function () {
-    //         $('.details_info .color span').removeClass('red');
-    //         $(this).addClass('red');
-    //     })
-    // }
-    // buttonChange();
-    function buttonChange(x) {
-        $(x).click(function () {
-            $(x).removeClass('red');
+        $('.details_info').on('click','.color span',function () {
+            $('.details_info .color span').removeClass('red');
             $(this).addClass('red');
+             s = $(this).text();
         })
-    }
+        
+        $('.details_info').on('click','.memory span',function () {
+            $('.details_info .memory span').removeClass('red');
+            $(this).addClass('red');
+             x = $(this).text();
+        })
+
 
 
     function liChange() {
@@ -260,5 +290,56 @@ window.onload = function () {
     $('.return_top').click(function () {
         $(window).scrollTop(0);
     });
+    
+     function addCart(){
+    	//alert(22222)
+  		$('#cart_buy').parent().click(function(){
+			var cookie = document.cookie;
+			cookie.match(/userid=(.*);/);
+			if(!RegExp.$1){
+				alert('还没有登录');
+				return false;
+			}
+			//user_id
+			var userid=RegExp.$1;
+			//购买数量
+  			var buyNum=$('.count .countNum').val();
+  			//购买商品id
+  			var goodid=$('#cart_buy').html();
+  			//选择的一些条件
+  			var color=$('div.color span.red').text(),memory=$('div.memory span.red').text();
+  			
+  			if(color&&memory){
+				$.ajax({
+					type:"get",
+					url:"/project/ec/api/add_cart.php",
+					data:{
+						goodId:goodid,
+						userId:userid,
+						count:buyNum,
+						color:color,
+						memory:memory
+					},
+					success:function(resp){
+						if(resp.ret){
+							alert('添加购物车成功')
+						}else{
+							alert('添加购物车失败')
+						}
+					},
+					error:function(xhr){
+						alert('出现错误')
+					}
+				});
+  			}else{
+  				alert('内存容量未选择')
+  			}
+			
+			
+		})
+	}
 
 }
+   
+   
+

@@ -16,8 +16,9 @@
 	header("content-type: text/json");
 	if($result->num_rows > 0) {
 		//登录成功
+		$userid  = $result->fetch_assoc()['id'];
 	    header("Set-Cookie:username=$user;path=/");
-		echo '{"ret": true}';
+		echo '{"ret": true , "userid":'.$userid.'}';
 	} else {
 		//登录失败
 		echo '{"ret": false}';
