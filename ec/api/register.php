@@ -3,6 +3,8 @@
 	$user = $_POST['user'];
 	$password = $_POST['pw'];
 	$tel = $_POST['tel'];
+	$email = $_POST['email'];
+	$address = $_POST['address'];
 	//md5加密算法
 	$password = md5($password);
 	//检测用户是否存在
@@ -18,9 +20,9 @@
 	}
 	//插入数据
 	$sql = "INSERT INTO `users`
-			(`id`,`username`,`password`,`tel`)
+			(`id`,`username`,`password`,`tel`,`email`,`address`)
 			VALUES
-			(NULL,'$user','$password','$tel')";
+			(NULL,'$user','$password','$tel','$email','$address')";
 	if(mysqli_query($conn,$sql)===true){
 		//插入成功
 		echo '{"ret":true}';

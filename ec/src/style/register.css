@@ -22,6 +22,7 @@ body {
   font-size: 12px;
   font-family: "微软雅黑";
   color: #3e3e3e;
+  user-select: none;
 }
 
 a {
@@ -918,5 +919,4 @@ img {
   line-height: 46px;
   text-indent: 10px;
 }
-
 /*# sourceMappingURL=register.css.map */

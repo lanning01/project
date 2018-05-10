@@ -30,12 +30,7 @@
 			    		$productsOrder[] = $oneData;
 			    	}
 			    }
-	
-	
 
-
-
-	
 	header("content-type: text/json");
 	echo json_encode($productsOrder);
 

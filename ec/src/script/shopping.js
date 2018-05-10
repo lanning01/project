@@ -41,7 +41,6 @@ if(RegExp.$1){
     type: 'get',
     data: {
         userid: RegExp.$1
-        //productid:5,
     },
     success: function (resp) {
     	resp2 = resp;
@@ -52,7 +51,6 @@ if(RegExp.$1){
         
         kk();
         totle();
-        
 
     },
     error: function (xhr) {
@@ -66,18 +64,26 @@ if(RegExp.$1){
 }
 
 
-//计算小计
+//计算小计,选中改变金额
 function totle(){
-	var count=$('.shopbox .count').html();
-	var price=$('.shopbox .price').html();
-	$('.shopbox .totle').html(count*price)
+    var money=0;
+    $('input[type=checkbox].inp').change(function () {
+        var selected = $(this).prop('checked');
+        if(selected){
+            money+=parseFloat($(this).parents('.shopbox').find('div.totle').html());
+        }else{
+            money-=parseFloat($(this).parents('.shopbox').find('div.totle').html());
+        }
+        $('.pay-message .price b').html(money)
+
+    })
 }
 $('#payId').click(function(){
 	console.log($('li input[type=checkbox]:checked').length)
 	var l = $('li input[type=checkbox]');
 	var arrs = [];
 	if($('li input[type=checkbox]:checked').length === 0){
-			alert("请选择商品")
+			alert("请挑选商品");
 			return;
 	}else{
 		for(var i=0;i<l.length;i++){
@@ -90,9 +96,9 @@ $('#payId').click(function(){
 	//console.log(arrs);
 	$.get('/project/ec/api/order.php?',{arr : arrs},function(resp){
 		if(resp.ret){
-			alert("结算成功")
+			// alert("结算成功");
 		}else{
-			alert(resp.ret)
+			alert(resp.ret);
 		}
 		
 	})

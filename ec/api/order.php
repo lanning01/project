@@ -8,7 +8,8 @@
 		$userid = empty($_COOKIE['username']) ? null: $_COOKIE['username'];
 		$comments = '东西不错';
 		$totalprice = 0.0;
-		
+
+		//订单编号
 		date_default_timezone_set("PRC");
 		$tt =  date ( "Y-m-d H:i:s" );
 		$orderon = $tt;	
@@ -29,7 +30,8 @@
 		$b =  mysqli_query($conn,$sql2);
 		if($b ===true){
 			$t++;
-			//$sql3 = "delete * from `car`"
+			$sql3 = "delete  from `cart` where `productid`='$goodid'";
+			$delete =  mysqli_query($conn,$sql3);
 		}else{
 			$f++;
 		}

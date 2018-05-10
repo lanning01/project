@@ -87,12 +87,12 @@ window.onload = function () {
 
     $('.list_all_left').on('click','li',function(){
         var id = $(this).children('#allList').text();
-        location = './src/html/details.html?productId='+id;
+        window.open('./src/html/details.html?productId='+id);
     });
 
     $('.list_all_right').on('click','li',function(){
         var id = $(this).children('#allRight').text();
-        location = './src/html/details.html?productId='+id;
+        window.open('./src/html/details.html?productId='+id);
     });
     function animation(el, properties, callback) {
         clearInterval(el.phgap_id);

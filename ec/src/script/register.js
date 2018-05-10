@@ -1,8 +1,11 @@
 $('button').click(function () {
+
     $.post('/project/ec/api/register.php', {
         user: $('#user').val(),
         pw: $('#pw').val(),
-        tel: $('#phone').val()
+        tel: $('#phone').val(),
+        email: $('#email').val(),
+        address: $('#address').val()
     }, function (resp) {
         if(resp.ret) {
             //注册成功

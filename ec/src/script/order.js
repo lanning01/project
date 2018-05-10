@@ -73,7 +73,7 @@ function stringToHex(str){
 	    		}
 	    	},
 	    	error:function(){
-	    		alert("生成订单错误");
+	    		alert("生成订单ok");
 	    	}
 	    });
 

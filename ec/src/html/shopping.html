@@ -5,55 +5,6 @@
     <title>Title</title>
     <link rel="stylesheet" href="../style/shopping.css">
     <style>
-    	.clear:after{
-			content: '';
-			height: 0;
-			display: block;
-			visibility: hidden;
-			clear: both;
-		}
-		.shopbox{
-			border-bottom: 1px solid #eee;
-			padding-bottom: 10px;
-			margin-bottom: 10px;
-		}
-		.shopbox ul li{
-			float: left;
-			text-align: left;
-		}
-		.shopbox ul li:nth-of-type(1){
-			width: 50px;
-		}
-		.shopbox ul li:nth-of-type(2){
-			width: 390px;
-			margin-left: 80px;
-			
-		}
-		.shopbox ul li:nth-of-type(3){
-			width: 138px
-			
-		}
-		.shopbox ul li:nth-of-type(4){
-			width: 102px
-			
-		}
-		.shopbox ul li:nth-of-type(5){
-			width: 132px
-			
-		}
-		.shopbox ul li:last-child a{
-			width: 40px;
-			height: 40px;
-			display: block;
-			margin: 0 auto;
-		}
-		.shopbox .img img{
-			width: 80px;
-			float: left;
-		}
-		.details_pic{
-			margin-top: 10px;
-		}
     </style>
 </head>
 <body>
@@ -61,12 +12,12 @@
     <div class="user-info w">
         <div class="login-info l">
             <span><a href="javaScript:;">商城首页</a></span>
-            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="javaScript:;">登录</a></span></div>
+            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="./login.html">登录</a></span></div>
             <span class="exit"><a href="javaScript:;">免费注册</a></span>
         </div>
         <ul class="quick-menu r">
-            <li><a href="javaScript:;">我的订单</a></li>
-            <li><a href="javaScript:;">购物车0件</a></li>
+            <li><a href="http://localhost/project/ec/src/html/myOrder.html">我的订单</a></li>
+            <li><a href="http://localhost/project/ec/src/html/shopping.html">购物车<span>0</span>件</a></li>
             <li><a href="javaScript:;">帮助中心</a></li>
             <li><a href="javaScript:;">手机商城<i class="ico1"></i></a></li>
             <li><a href="javaScript:;">中关村在线</a></li>
@@ -79,11 +30,11 @@
     <div class="cart-title ">
         <div class="name l">全部商品<span>0</span></div>
         <div class="pay-message r">
-            <span class="favorable">优惠：</span>
-            <span class="reduce">-¥0.00</span>
+            <!--<span class="favorable">优惠：</span>-->
+            <!--<span class="reduce">-¥0.00</span>-->
             商品金额（不含运费）：
             <span class="price">¥<b>0.00</b></span>
-            <button id="payId">去结算</button>
+            <button id="payId"><a href="http://localhost/project/ec/src/html/myOrder.html" style="text-decoration: none">去结算</a></button>
         </div>
     </div>
     <div class="cart-table">
@@ -134,7 +85,7 @@
     				<div class="count">{{value.count}}</div>
     			</li>
     			<li>
-    				<div class="totle"></div>
+    				<div class="totle">{{value.price*value.count}}</div>
     			</li>
     			<li>
     				<a>删除</a>

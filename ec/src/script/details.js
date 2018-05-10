@@ -6,9 +6,7 @@ window.onload = function () {
     var s;
     var x;
 	//获取所选颜色与型号
-	
-	
-	
+
     function getQueryString(name) {
         var result = window.location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
         if (result == null || result.length < 1) {
