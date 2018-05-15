@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="../style/order.css">
-	</head>
-	<body>
-		<!--头-->
-		<header>
-			<div class="user-info w">
-				<div class="login-info l">
-					<span><a href="http://localhost/project/ec/">商城首页</a></span>
-					<div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="http://localhost/project/ec/src/html/login.html">登录</a></span></div>
-					<span class="register"><a href="http://localhost/project/ec/src/html/register.html">免费注册</a></span>
-					<span class="exit"><a href="http://localhost/project/ec/src/html/login.html"></a></span>
-				</div>
-				<ul class="quick-menu r">
-					<li><a href="http://localhost/project/ec/src/html/myOrder.html">我的订单</a></li>
-					<li><a href="http://localhost/project/ec/src/html/shopping.html">购物车<span>0</span>件</a></li>
-					<li><a href="JavaScript:;">帮助中心</a></li>
-					<li><a href="JavaScript:;">手机商城<i class="ico1"></i></a></li>
-					<li><a href="JavaScript:;">中关村在线</a></li>
-					<li><a href="JavaScript:;">招商合作</a></li>
-					<li><a href="JavaScript:;">联系客服<i class="ico2"></i></a></li>
-				</ul>
-			</div>
-		</header>
-		<main>
-			<div class="sure">
-				<p class="p1">确认订单信息</p>
-				<table>
-					<thead>
-						<tr>
-							<th>商品信息</th>
-							<th>单价</th>
-							<th>数量</th>
-							<th>优惠</th>
-							<th>小计</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="ttr">
-							
-						</tr>
-					</tbody>
-				</table>
-				<div class="tongzhi">
-					<span class="last"></span>
-					<span>商家承诺支付成功后24小时内发货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款</span>
-				</div>
-				<form action="http://localhost/project/ec/src/html/myOrder.html">
-					<button>提交订单</button>
-				</form>
-			</div>
-		</main>
-		
-		<!--尾-->
-		<footer></footer>
-		<script src="../script/remberLogin.js"></script>
-		<script type="text/html" id="order_info">
-			<td>
-				<dl class="cart_details">
-			    	<dt><img src="{{o.img1}}"/></dt>
-			        <dd>
-			        	<div>
-			        	<p class="title">{{o.title}}</p>
-			            <p class="color"><span>颜色:&nbsp;&nbsp;</span>{{o.col}}</p>
-			            <p class="memory"><span>型号:&nbsp;&nbsp;</span>{{o.xing}}</p>
-			            </div>
-			        </dd>
-			   </dl>
-			</td>
-			<td>{{o.pri}}</td>
-			<td>{{o.num}}</td>
-			<td>{{'--'}}</td>
-			<td>{{o.zong}}</td>
-			
-		</script>	
-		<script src="../lib/jquery-3.3.1.min.js"></script>
-		<script src="../template/template.js"></script>
-		<script src="../script/order.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../style/order.css">
+</head>
+<body>
+<!--头-->
+<header>
+    <div class="user-info w">
+        <div class="login-info l">
+            <span><a href="javaScript:;">商城首页</a></span>
+            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="./login.html">登录</a></span></div>
+            <span class="exit"><a href="javaScript:;">免费注册</a></span>
+        </div>
+        <ul class="quick-menu r">
+            <li><a href="http://localhost/project/ec/src/html/myOrder.html">我的订单</a></li>
+            <li><a href="http://localhost/project/ec/src/html/shopping.html">购物车<span>0</span>件</a></li>
+            <li><a href="javaScript:;">帮助中心</a></li>
+            <li><a href="javaScript:;">手机商城<i class="ico1"></i></a></li>
+            <li><a href="javaScript:;">中关村在线</a></li>
+            <li><a href="javaScript:;">招商合作</a></li>
+            <li><a href="javaScript:;">联系客服<i class="ico2"></i></a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <div class="sure">
+        <p class="p1">确认订单信息</p>
+        <table>
+            <thead>
+            <tr>
+                <th>商品信息</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>优惠</th>
+                <th>小计</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="ttr">
+
+            </tr>
+            </tbody>
+        </table>
+        <div class="tongzhi">
+            <span class="last"></span>
+            <span>商家承诺支付成功后24小时内发货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款</span>
+        </div>
+        <form action="http://localhost/project/ec/src/html/myOrder.html">
+            <button>提交订单</button>
+        </form>
+    </div>
+</main>
+
+<!--尾-->
+<footer></footer>
+<script src="../script/remberLogin.js"></script>
+<script type="text/html" id="order_info">
+
+    <td>
+        <dl class="cart_details">
+            <dt><img src="{{o.img1}}"/></dt>
+            <dd>
+                <div>
+                    <p class="title">{{o.title}}</p>
+                    <p class="color"><span>颜色:&nbsp;&nbsp;</span>{{o.col}}</p>
+                    <p class="memory"><span>型号:&nbsp;&nbsp;</span>{{o.xing}}</p>
+                </div>
+            </dd>
+        </dl>
+    </td>
+    <td>{{o.pri}}</td>
+    <td>{{o.num}}</td>
+    <td>{{'--'}}</td>
+    <td>{{o.zong}}</td>
+
+</script>
+<script src="../lib/jquery-3.3.1.min.js"></script>
+<script src="../template/template.js"></script>
+<script src="../script/order.js"></script>
 
 
-	</body>
+</body>
 </html>

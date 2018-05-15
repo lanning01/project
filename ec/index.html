@@ -885,6 +885,7 @@
 <script>
 
     var all;
+
     $.get('/project/ec/api/products_list.php', {}, function (resp) {
         all = resp;
         var html = template('list_all_right_tpl', {
@@ -892,6 +893,30 @@
         });
         $('.list_all_right').append(html);
     });
+    // $('.sub').click(function () {
+    //
+    //     var len = list.length;
+    //     var arr = [];
+    //     for(var i=0;i<len;i++){
+    //         //如果字符串中不包含目标字符会返回-1
+    //         if(list[i].indexOf(resp)>=0){
+    //             arr.push(list[i]);
+    //         }
+    //     }
+    //     alert(resp);
+    //     return arr;
+    //
+    //     // var len = list.length;
+    //     // var arr = [];
+    //     // var reg = new RegExp(resp);
+    //     // for(var i=0;i<len;i++){
+    //     //     //如果字符串中不包含目标字符会返回-1
+    //     //     if(list[i].match(reg)){
+    //     //         arr.push(list[i]);
+    //     //     }
+    //     // }
+    //     // return arr;
+    // });
     $('.enter').click(function () {
         var fin = [];
         var b = parseInt($('.low').val());
@@ -914,7 +939,8 @@
             $('.list_all_left').append(html);
         }
 
-    })
+    });
+
     $('.clear').click(function () {
         $('.low').val("");
         $('.high').val("");

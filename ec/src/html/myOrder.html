@@ -11,7 +11,7 @@
 <header>
     <div class="user-info w">
         <div class="login-info l">
-            <span><a href="javaScript:;">商城首页</a></span>
+            <span><a href="http://localhost/project/ec/index.html">商城首页</a></span>
             <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="./login.html">登录</a></span></div>
             <span class="exit"><a href="javaScript:;">免费注册</a></span>
         </div>
@@ -45,7 +45,7 @@
 
         {{each v as x j}}
         {{if j == 0}}
-        <tr>
+        <tr class="tr">
             <td>
                 <dl class="cart_details">
                     <dt><img src={{x.img}}></dt>
@@ -60,7 +60,7 @@
             </td>
             <td>{{x.count}}</td>
             <td>{{x.price}}</td>
-            <td rowspan={{j}}>{{x.price*x.count}}</td>
+            <td rowspan={{j}} class="totle">{{x.price * x.count}}</td>
             <td rowspan={{j}}>
                 <button>删除</button>
             </td>
@@ -93,10 +93,12 @@
     </table>
     {{/each}}
 </script>
-
+<script src="../lib/jquery-3.3.1.js"></script>
 <script src="../template/template.js"></script>
 <script src="../script/myOrder.js"></script>
+<script>
 
+</script>
 </body>
 
 </html>
