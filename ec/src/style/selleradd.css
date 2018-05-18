@@ -754,6 +754,9 @@ img {
   padding: 10px 20px;
   line-height: 30px; }
 
+#main .form {
+  line-height: 50px; }
+
 #main .form .label {
   padding: 10px 0px;
   width: 700px;
@@ -761,11 +764,13 @@ img {
   margin: 0 auto; }
 
 #main .form .label .name {
-  font-size: 15px;
+  font-size: 30px;
   color: #333;
   width: 136px;
-  text-align: right;
-  line-height: 36px; }
+  text-align: right; }
+
+#main .form .label .name span {
+  color: red; }
 
 #main .form .label .input input {
   padding-left: 5px;
@@ -786,4 +791,4 @@ img {
   line-height: 46px;
   text-indent: 10px; }
 
-/*# sourceMappingURL=register.css.map */
+/*# sourceMappingURL=selleradd.css.map */

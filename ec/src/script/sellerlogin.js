@@ -5,7 +5,7 @@ $('button').click(function () {
     }, function (resp) {
         if(resp.ret) {
             //登录成功
-            location = '/project/ec/a.html';
+            location = 'http://localhost/project/ec/src/html/indexM.html';
         } else {
             //登录失败
             alert('登录失败');

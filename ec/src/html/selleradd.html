@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style/selleradd.css"/>
+</head>
+<body>
+<div id="main" class="w">
+    <form class="name fupload">
+        <div class="form">
+            <div class="name l">手机品牌名：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="name"></label>
+                </div>
+            </div>
+            <div class="name l">手机原价：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="price_before"></label>
+                </div>
+            </div>
+            <div class="name l">手机现价：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="price_now"></label>
+                </div>
+            </div>
+            <div class="name l">手机标题：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="tittle"></label>
+                </div>
+            </div>
+            <div class="name l">手机首页展示图片：</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img0" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机品牌缩略图</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img1" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片1：</div>
+            <div class="label">
+                <input type="file" name="img2" accept="image/gif, image/jpeg"/>
+            </div>
+
+            <div class="name l">手机详情页图片2：</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img3" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片3：</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img4" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片4：</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img5" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片5：</div>
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img6" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color1"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color2"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color3"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color4"></label>
+                </div>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem32">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem64">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem128">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem256">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <input type="submit"
+                   style="cursor:pointer;background:#db2e2e;color:#fff;font-size:16px;width:300px;height:38px;border:0;margin-left: 256px;">
+            点击添加手机信息
+            </input>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../script/selleradd.js"></script>
+<script type="text/javascript">
+
+    $('form').submit(function (event) {
+        event.preventDefault();
+        var form = $(this);
+
+        if (!form.hasClass('fupload')) {
+            //普通表单
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize()
+            }).success(function () {
+                //成功提交
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                //错误信息
+            });
+        }
+        else {
+            // mulitipart form,如文件上传类
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'post',
+                url: '/project/ec/api/selleradd.php',
+                data: formData,
+                mimeType: "multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (resp) {
+                    console.log(resp.ret);
+                    if (resp) {
+                        //注册成功
+                        alert('插入数据成功');
+                        location = '/project/ec/src/html/loginM.html';
+                    } else {
+                        //注册失败
+                        alert('插入失败');
+                    }
+                }, error: function () {
+                    //错误信息
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

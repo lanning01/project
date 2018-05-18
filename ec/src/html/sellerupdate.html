@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style/sellerupdate.css"/>
+</head>
+<body>
+<div id="main" class="w">
+    <form class="name fupload">
+        <div class="form">
+            <div class="name l">手机品牌名：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="name"></label>
+                </div>
+            </div>
+            <div class="name l">手机原价：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="price_before"></label>
+                </div>
+            </div>
+            <div class="name l">手机现价：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="price_now"></label>
+                </div>
+            </div>
+            <div class="name l">手机标题：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="tittle"></label>
+                </div>
+            </div>
+            <div class="name l">手机首页展示图片：</div>
+            <img src="" id="img0" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img0" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机品牌缩略图</div>
+            <img src="" id="img1" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img1" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片1：</div>
+            <img src="" id="img2" class="imgShow">
+            <div class="label">
+                <input type="file" name="img2" accept="image/gif, image/jpeg"/>
+            </div>
+
+            <div class="name l">手机详情页图片2：</div>
+            <img src="" id="img3" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img3" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片3：</div>
+            <img src="" id="img4" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img4" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片4：</div>
+            <img src="" id="img5" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img5" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机详情页图片5：</div>
+            <img src="" id="img6" class="imgShow">
+            <div class="label">
+                <div class="input l">
+                    <input type="file" name="img6" accept="image/gif, image/jpeg"/>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color1"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color2"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color3"></label>
+                </div>
+            </div>
+            <div class="name l">手机颜色：</div>
+            <div class="label">
+                <div class="input l">
+                    <label><input type="text" name="color4"></label>
+                </div>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem32">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem64">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem128">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <div class="name l">手机内存：</div>
+            <div class="label">
+                <select name="mem256">
+                    <option value="0"></option>
+                    <option value="32G">32G</option>
+                    <option value="64G">64G</option>
+                    <option value="128G">128G</option>
+                    <option value="256G">256G</option>
+                </select>
+            </div>
+            <button type="submit"
+                    style="cursor:pointer;background:#db2e2e;color:#fff;font-size:16px;width:300px;height:38px;border:0;margin-left: 256px;">
+                点击修改手机信息
+            </button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../script/selleradd.js"></script>
+<script type="text/javascript">
+    $id = GetQueryString("id");
+    console.log($id);
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    $.get('/project/ec/api/findbyid.php?id=' + $id, function (resp) {
+        $('input[name="name"]').val(resp[0].name);
+        $('input[name="price_before"]').val(resp[0].price_before);
+        $('input[name="price_now"]').val(resp[0].price);
+        $('input[name="tittle"]').val(resp[0].title);
+        $('input[name="color1"]').val(resp[0].color1);
+        $('input[name="color2"]').val(resp[0].color2);
+        $('input[name="color3"]').val(resp[0].color3);
+        $('input[name="color4"]').val(resp[0].color4);
+        $('input[name="mem32"]').find("option:[text=" + resp[0].mem32 + "]").attr("selected", true);
+        $('input[name="mem64"]').val(resp[0].mem64);
+        $('input[name="mem128"]').val(resp[0].mem128);
+        $('input[name="mem256"]').val(resp[0].mem256);
+        $('#img0').attr("src", resp[0].imgnormal);
+        $('#img1').attr("src", resp[0].brandimg);
+        $('#img2').attr("src", resp[0].img1);
+        $('#img3').attr("src", resp[0].img2);
+        $('#img4').attr("src", resp[0].img3);
+        $('#img5').attr("src", resp[0].img4);
+        $('#img6').attr("src", resp[0].img5);
+    });
+    $('form').submit(function (event) {
+        event.preventDefault();
+        var form = $(this);
+
+        if (!form.hasClass('fupload')) {
+            //普通表单
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize()
+            }).success(function () {
+                //成功提交
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                //错误信息
+            });
+        }
+        else {
+            // mulitipart form,如文件上传类
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'post',
+                url: '/project/ec/api/sellerupdate.php',
+                data: formData,
+                mimeType: "multipart/form-data",
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (resp) {
+                    console.log(resp.ret);
+                    if (resp) {
+                        //注册成功
+                        alert('修改数据成功');
+                        location = '/project/ec/src/html/indexM.html';
+                    } else {
+                        //注册失败
+                        alert('修改失败');
+                    }
+                }, error: function () {
+                    //错误信息
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

@@ -25,10 +25,10 @@
 			(NULL,'$user','$password','$tel','$email','$address')";
 	if(mysqli_query($conn,$sql)===true){
 		//插入成功
-		echo '{"ret":true}';
+		echo 'true';
 	}else{
 		//插入失败
-		echo '{"ret":false}';
+		echo 'false';
 	};
 	$conn->close();
 ?>

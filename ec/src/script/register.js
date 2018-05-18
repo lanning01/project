@@ -13,8 +13,8 @@ $('button').click(function () {
             if(!((use>=48 && use<=57) || (use>=65 && use<=90) || (use>=97 && use<=122) || (use===95))){
                 $('#main .form .label .hint1').html('用户名输入错误');
                 return ;
-            }else if(!(user.length>=3 && user.length<=20)){
-                $('#main .form .label .hint1').html('用户名长度不低于6，不高于20');
+            }else if(!(user.length>=3 && user.length<=10)){
+                $('#main .form .label .hint1').html('用户名长度不低于3位，不高于10位');
                  return ;
             }else{
 

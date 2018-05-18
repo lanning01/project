@@ -12,9 +12,10 @@
 <header>
     <div class="user-info w">
         <div class="login-info l">
-            <span><a href="javaScript:;">商城首页</a></span>
-            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a href="./login.html">登录</a></span></div>
-            <span class="exit"><a href="javaScript:;">免费注册</a></span>
+            <span><a href="http://localhost/project/ec">商城首页</a></span>
+            <div class="welcome"><span style="color: #666">Hi~欢迎来到Z商城，请<a
+                    href="http://localhost/project/ec/src/html/login.html">登录</a></span></div>
+            <span class="exit"><a href="http://localhost/project/ec/src/html/register.html">免费注册</a></span>
         </div>
         <ul class="quick-menu r">
             <li><a href="http://localhost/project/ec/src/html/myOrder.html">我的订单</a></li>
@@ -32,13 +33,14 @@
         <a href="JavaScript:;"><img class="l" src="/project/ec/assets/imgs/indeximg/logo.png" alt=""></a>
         <div class="search l">
             <form>
-                <input type="text" placeholder="找找你想搜索的商品~" class="text"/>
-                <input type="submit" value="搜索" class="sub"/>
+                <input id="seartext1" type="text" placeholder="找找你想搜索的商品~" class="text"/>
+                <input onclick="sear(1)" value="搜索" class="sub"/>
             </form>
         </div>
         <div class="quick-entry r">
             <a href="http://localhost/project/ec/src/html/myOrder.html"><i class="icon1"></i>我的订单</a>
-            <a href="http://localhost/project/ec/src/html/shopping.html"><i class="icon2"></i>购物车<i class="icon3 mycart-count">0</i></a>
+            <a href="http://localhost/project/ec/src/html/shopping.html"><i class="icon2"></i>购物车<i
+                    class="icon3 mycart-count">0</i></a>
         </div>
     </div>
 </section>
@@ -47,8 +49,8 @@
         <a href="JavaScript:;"><img class="l" src="/project/ec/assets/imgs/indeximg/logo.png" alt=""></a>
         <div class="search l">
             <form>
-                <input type="text" placeholder="找找你想搜索的商品~" class="text"/>
-                <input type="submit" value="搜索" class="sub"/>
+                <input id="seartext2" type="text" placeholder="找找你想搜索的商品~" class="text"/>
+                <input onclick="sear(2)" value="搜索" class="sub"/>
             </form>
         </div>
         <div class="quick-entry r">
@@ -693,8 +695,8 @@
 </section>
 <div class="searchBottom w">
     <form>
-        <input type="text" placeholder="搜索一下" class="text"/>
-        <input type="submit" value="搜索" class="sub"/>
+        <input id="seartext3" type="text" placeholder="找找你想搜索的商品~" class="text"/>
+        <input onclick="sear(3)" value="搜索" class="sub"/>
     </form>
 </div>
 <section id="footer">
@@ -832,7 +834,6 @@
 
                 mode: 'click', //默认值是link，可选link或者click
                 click: function (n) {
-                    // do something
                     //手动选中按钮
                     //n当前页
                     this.selectPage(n);
@@ -893,41 +894,18 @@
         });
         $('.list_all_right').append(html);
     });
-    // $('.sub').click(function () {
-    //
-    //     var len = list.length;
-    //     var arr = [];
-    //     for(var i=0;i<len;i++){
-    //         //如果字符串中不包含目标字符会返回-1
-    //         if(list[i].indexOf(resp)>=0){
-    //             arr.push(list[i]);
-    //         }
-    //     }
-    //     alert(resp);
-    //     return arr;
-    //
-    //     // var len = list.length;
-    //     // var arr = [];
-    //     // var reg = new RegExp(resp);
-    //     // for(var i=0;i<len;i++){
-    //     //     //如果字符串中不包含目标字符会返回-1
-    //     //     if(list[i].match(reg)){
-    //     //         arr.push(list[i]);
-    //     //     }
-    //     // }
-    //     // return arr;
-    // });
+
     $('.enter').click(function () {
         var fin = [];
-        var b = parseInt($('.low').val());
-        var a = parseInt($('.high').val());
+        var low = parseInt($('.low').val());
+        var high = parseInt($('.high').val());
 
-        if (!b || !a) {
+        if (!low || !high) {
             alert('请输入最大或最小价格');
         } else {
             for (var i = 0; i < all.length; i++) {
                 // console.log(all[i])
-                if (parseInt(all[i].price) >= b && parseInt(all[i].price) <= a) {
+                if (parseInt(all[i].price) >= low && parseInt(all[i].price) <= high) {
 
                     fin.push(all[i]);
                 }
@@ -940,6 +918,19 @@
         }
 
     });
+
+    function sear($searchid) {
+        alert($searchid);
+        $infor = $("#seartext" + $searchid).val();
+
+        $.get('/project/ec/api/search.php?info=' + $infor, {}, function (resp) {
+
+            var html = template('list_all_left_tpl', {
+                arr: resp
+            });
+            $('.list_all_left').html(html);
+        });
+    }
 
     $('.clear').click(function () {
         $('.low').val("");
